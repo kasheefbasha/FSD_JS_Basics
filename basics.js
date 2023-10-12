@@ -1216,6 +1216,8 @@ for (str of stringer){
 
 console.log("Hello world");
 
+console.log("Hello world 1");
+
 
 
 
