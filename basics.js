@@ -1214,6 +1214,8 @@ for (str of stringer){
 //javascript object notation b
 
 
+console.log("Hello world");
+
 
 
 
