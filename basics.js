@@ -1107,10 +1107,7 @@ var arrow = (num1) => num1 * 2;
 
 console.log("The arrow function is : " , arrow(5));
 
-
-*/
-
-// console log functions.......................................................................................................................
+/ console log functions.......................................................................................................................
 
 const log = (param) => console.log(param);
 
@@ -1210,51 +1207,164 @@ for (str of stringer){
     console.log(str)
 }
 
-//JSON is nothing but is a objec
+//JSON is nothing but is a object b
 //javascript object notation b
 
+//Example 23
+// How to compare two JSON have the same properties without order?
 
-console.log("Hello world");
-
-console.log("Hello world 1");
-
-
-
+let obj1 = {name: "person 1", age: 5};
+let obj2 = {age: 5, name: "person 1"};
 
 
+function areJSONObjectsEqual(obj1, obj2) {
+    //.stringify() method is used to convert a JavaScript object into a JSON (JavaScript Object Notation) string
+    const sortedStr1 = JSON.stringify(obj1, Object.keys(obj1).sort());
+    console.log(sortedStr1);
+    const sortedStr2 = JSON.stringify(obj2, Object.keys(obj2).sort());
+    console.log(sortedStr2);
+  
+    //  that checks whether the two strings, sortedStr1 and sortedStr2
+    //  return statement is used to specify the value that a function should return. 
+    return sortedStr1 === sortedStr2; 
+  }
+  
+
+  // Check if the two JSON objects have the same properties (ignoring order)
+  const isEqual = areJSONObjectsEqual(obj1, obj2);
+  console.log(isEqual); // Output: true
+
+//block scoping - in betwwen the block
+
+function blockScoping(){
+    let namings = "kasheef";
+    console.log(namings);
+}   
+blockScoping();
+
+//global scoping
+
+let name1 = "kasheef"
+function globalScoping(){
+    console.log(name1);
+}
+globalScoping();
+
+//diff between let and const
+// redeclaration is not possible in both let and const
+        
+// let - we can reassigned a value
+let a = 15;
+console.log(a); // 15
+a = 16;
+console.log(a); // 16
+
+// const - we cannot reassigned a value
+const b = 15;
+console.log(b); // 15
+b = 16;
+console.log(b); // Uncaught TypeError: Assignment to constant variable
+
+// Spread and rest operators
+//spread -- 
+const individualArr = ["fruits", "veges", "drinks", "cosmetics"]
+console.log("names : " , ...individualArr);
+
+//rest
+function listIt1 (...all){
+    console.log("allItems : " , all);
+}
+listIt1("fruits", "veges", "drinks", "cosmetics")
+
+console.log(".....................................................................................................");
+
+//spread -- 
+const individualArr1 = ["fruits", "veges", "drinks", "cosmetics"] 
+console.log("names : " , ...individualArr1);
+
+function listIt2 (ag1,ag2,ag3,ag4){
+    console.log("spread is : " , ag1,ag2,ag3,ag4);
+}
+listIt2(...individualArr1);
+
+console.log(".....................................................................................................");
+
+//rest 
+const individualArr2 = ["fruits", "veges", "drinks", "cosmetics"]
+console.log("names : " , ...individualArr2);
+
+function listIt3 (...all){
+    console.log("rest is : " , all);
+}
+listIt3("fruits", "veges", "drinks", "cosmetics");
+
+console.log(".....................................................................................................");
+
+// Destructuring :
+
+const obj = {
+    name : "kasheef",
+    age : 21,
+    position :"full stack developer",
+    experience : "fresher"
+}
+// object destructuring : Object destructuring allows you to extract properties from an object and assign them to variables with curly braces {}.
+const {name, age, position, experience} = obj;
+console.log("name : " ,name);
+console.log("age : " ,age);
+console.log("position : " ,position);
+console.log("experience : " ,experience);
+
+console.log(".....................................................................................................");
+// array destructuring : Object destructuring allows you to extract properties from an object and assign them to variables with curly braces {}.
+
+const arr = ["kasheef", "mafaaz" , "anbu" , "arun"]
+
+const [name1 , name2 , ...namer] = arr; // ...namers => rest of the values using spread
+console.log(name1);
+console.log(name2);
+console.log(...namer);//spread
+console.log(namer); //rest
+
+console.log(".....................................................................................................");
+
+// object and properties shorthand
+
+const objArr = [
+    {
+        namers : "kasheef",
+        pos : "student"
+    }
+]
+
+const namers = "mafaaz";
+const pos = "student";
+
+//short hand : It allows you to create objects without explicitly specifying the property name when the variable name matches the desired property name.
+const newObj = {
+    namers,
+    pos,
+}
+
+objArr.push(newObj);// pushing new object to obj arr
+console.log(objArr);
+
+console.log(".....................................................................................................");
+
+const newString = ("the valid name is " + namers + " the position is " + pos );// normal way
+console.log(newString);
+
+// template literals : a way to create string literals with embedded expressions.
+// They are enclosed by backticks (``)
+// ${} inside the template literal is used to embed expressions.
+
+const newString1 = `the valid name is ${namers} the position is ${pos}`; //template literals
+console.log(newString1);
+
+console.log(".....................................................................................................");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
