@@ -1363,40 +1363,183 @@ console.log(newString1);
 
 console.log(".....................................................................................................");
 
+// function factory methods - one user and give multiple details 
+
+function createUser(name , age){
+    return{
+        name, //short hand
+        age, 
+        getDetails : function(){
+            console.log(`Hey my name is ${name} and my age is ${age}`) //template literals
+        }
+    }
+}
+
+const user1 = createUser("kasheef", "22");
+const user2 = createUser("mafaaz", "12");
+user1.getDetails();
+user2.getDetails();
+
+console.log(".....................................................................................................");
+
+// Another factory method
+
+function createCar(color, model, brand){
+    return{
+        color,
+        model,//short hand
+        brand,
+        getColor : function(){
+            console.log(`The data you asked is ${color}`);
+        },
+        getModel : function(){
+            console.log(`The data you asked is ${model}`);
+        },
+        getBrand : function(){
+            console.log(`The data you asked is ${brand}`);
+        }
+    }
+}
+const vehicle1 = createCar("red", "i20", "Hundai");
+const vehicle2 = createCar("grey", "jazz", "Honda");
+//access
+vehicle1.getBrand();
+vehicle2.getModel();
+
+console.log(".....................................................................................................");
+  
+// this - everything => nothing but it is window property
+// this - parent object relation
+var a = 25;
+console.log(this);
+console.log(window); //both are same
+
+var name = "kasheef"
+let user = {
+    name : "maffaz",
+    age : 12,
+    nestedObj : {
+        name : "khalidh",
+        getDetails1(){ //normal function target parent object
+            console.log("I'm normal function :" , this.name);
+        },
+        getDetails2 : () => { // => arrow function target the Global to that method where it is called
+            console.log("I'm arrow function :" ,this.name);
+        }
+    }
+}
+user.nestedObj.getDetails1();// this can target the getDetails()
+user.nestedObj.getDetails2();
+
+console.log(".....................................................................................................");
+
+//constructor methods - capital letter starts with function name 
+
+function Car (color, model, brand){
+    this.color = color;
+    this.model = model;
+    this.brand = brand;
+    this.getColor = function(){
+        console.log(`The data you asked is ${this.color}`); // Template Literals
+    }
+    this.getModel = function(){
+        console.log(`The data you asked is ${this.model}`); // Template Literals
+    }
+    this.getBrand = function(){
+        console.log(`The data you asked is ${this.brand}`); // Template Literals
+    }
+}
+
+// new - return type can take automatically
+const conVehicle = new Car("black", "slavia" , "skoda");
+const conVehicle2 = new Car("white", "city" ,"Honda");
+console.log(conVehicle);
+console.log(conVehicle.getColor());
+console.log(conVehicle2);
+console.log(conVehicle2.getModel());
+
+console.log(".....................................................................................................");
+
+//prototypes -  The prototype mechanism allows for the creation of hierarchies of objects with shared properties and behavior.
+
+function Car1 (color, model, brand){
+    this.color = color;
+    this.model = model;
+    this.brand = brand;
+}
+
+//prototypes
+    Car1.prototype.getColor = function(){
+        console.log(`The data you asked is ${this.color}`); // Template Literals
+    }
+    Car1.prototype.getModel = function(){
+        console.log(`The data you asked is ${this.model}`); // Template Literals
+    }
+    Car1.prototype.getBrand = function(){
+        console.log(`The data you asked is ${this.brand}`); // Template Literals
+    }
+    Car1.prototype.carDetails = function(){ // we cannot depended on the constructor 
+        console.log(`the brand is ${this.brand} and the model is ${this.model} and the coloe is ${this.color}`)
+    }
+
+
+// new - return type can take automatically
+const conVehicle3 = new Car1("black", "slavia" , "skoda");
+const conVehicle4 = new Car1("white", "city" ,"Honda");
+
+conVehicle3.getColor();
+conVehicle4.getModel();
+
+conVehicle3.carDetails();
+conVehicle4.carDetails();
+
+console.log(conVehicle3);
+console.log(conVehicle4);
+
+console.log(".....................................................................................................");
+ 
+// classes
+// we need a object so using keyword called constructor
+
+class Student {
+    constructor(name , batch ,week){
+        this.name = name;
+        this.batch = batch;
+        this.week = week;
+    }
+    onlyDetails(){
+        console.log(`The name of the student is ${this.name}
+        The batch is ${this.batch}
+        The class type is ${this.week} `)
+    }
+}
+// superclass
+
+class Placement extends Student{
+    constructor(name, batch, week, company){
+        super(name, batch, week); // super keyword => takes the value from Student class
+        this.company = company;
+    }
+    getDetails(){
+        console.log(`The name of the student is ${this.name}
+        The batch is ${this.batch} 
+        The class type is ${this.week} 
+        placed company is ${this.company}`); // this.name => becoz we using constructor
+    }
+}
+
+const studentOne = new Student("Kasheef", "B43", "weekend");
+console.log(studentOne);
+
+// for placement  scenario
+const placedStudents = new Placement("mafaaz", "B43", "weekend", "google");
+console.log(placedStudents);
+
+placedStudents.onlyDetails();
+placedStudents.getDetails();
 
 */
-
-console.log("iiiii");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
