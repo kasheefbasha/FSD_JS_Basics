@@ -1154,6 +1154,7 @@ log("....................for each.....................")
 // for of - string
 
 //forEach has three parameter (value, index ,actualArr)
+//for each does return any array or change
 //only accessible for array
  
 studentArr.forEach((value, index, actualArr) => {
@@ -1538,22 +1539,135 @@ console.log(placedStudents);
 placedStudents.onlyDetails();
 placedStudents.getDetails();
 
-*/
+// Example 24
+// calling the falg and regoin data from restcountries
+
+let xhr = new XMLHttpRequest();
+console.log(xhr);
+
+xhr.open("GET" , "https://restcountries.com/v3.1/all" );
+xhr.send();
+xhr.onload = function(){
+    const data = JSON.parse(xhr.response);
+    console.log(xhr.status);
+
+    //using for each to get the data
+    data.forEach((val) => {
+        console.log(`Flag is : ${val.flags.png}
+        Region is : ${val.region}`)
+        
+    });
+    }
+    
+ // Array Types
+ // Map , Filter and Reduce.......
+ // MRF Functions
+
+ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// Map - is array methods which returns a new array 
+// map(() => {return []})
+
+const arrMap = arr.map((val, idx, accArr) => {
+    console.log(`
+    value is : ${val}
+    index is : ${idx}
+    ActualArr is : ${accArr}
+    `)
+})
+
+// using return
  
+const tableFive = arr.map((val, idx, accArr) => {
+    return val * 5;
+})
+console.log(tableFive);
 
+// filter
+// returns an array.
+// filter(() => {return []})
 
+const filterArray = arr.filter((val, idx, accArr) => val !==5); // remove value 5
+console.log(filterArray);
 
+const checkValueOrNot = arr.includes(11); // checking the contains value or not   
+console.log(checkValueOrNot);
 
+// Reduce
+// returns a value
+// reduce(() =>{return value})
+// acc - accumulator - individual value
 
+const add = arr.reduce((acc, val, index, accArr) => {
+    return acc + val ;
+}, 0); // 0 => it represent initial value 
 
+console.log("reduce return is :" , add);
 
+// Example 25
+// 1.map
+// 2.remove kasheef using filter
 
+const arr = ["kasheef", "mafaaz", "kalil"]
 
+const arrMap = arr.map((val, idx, accArr) => {
+    console.log(`Value is ${val}`);
+})
+const removeName = "kasheef";
+const arrFilter = arr.filter((val, idx, accArr) => val !== removeName);
+console.log(arrFilter);
 
+// prototype of map
+// creating own prototype method for map
 
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+Array.prototype.zenMap = function(fn){
+    let arr = []
+    for (let i=0; i<this.length; i++){ // this usingg parent class 
+        arr.push(fn(this[i], i, this))
+    }
+    return arr
+}
+arr.zenMap((val, idx, accArr) =>{
+    console.log(`
+    value is ${val}
+    index is ${idx}
+    actual array is ${accArr}`)
+})
 
+// prototype for filter
 
+Array.prototype.zenFilter = function(fn){
+    let arr = []
+    for (let i=0; i<this.length; i++){
+        if(fn(this[i], i, this)){
+            arr.push(this[i])
+        }
+    }
+    return arr
+}
+const zenClassFilter = arr.zenFilter((val, idx, accArr) => val > 2);
+console.log(zenClassFilter);
 
+// ptototype for reduce
 
+const arr1 = ["kasheef", "mafaaz"];
+
+Array.prototype.zenReduce = function(fn, acc){
+    let arr1 = []
+    for (let i=0; i<this.length; i++){
+        if(fn(acc,this[i], i, this[i])){
+            arr1.push(this[i])
+        }
+    }
+    return arr1
+}
+
+const addReduce = arr1.reduce((acc, val, idx, accArr) =>{
+    return acc + val ;
+}, "kalil");
+
+console.log(addReduce);
+
+*/
 
