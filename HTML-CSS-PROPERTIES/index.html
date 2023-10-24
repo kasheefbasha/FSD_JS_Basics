@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html-Css</title>
+
+    <!-- external css linking style.css from another file-->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+            /*internal css*/
+        div{
+            background-color: red; 
+            text-align: center; 
+            color: black;
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style> -->
+
+
+</head>
+<body>
+
+    <!-- css-cascading style sheets
+    ways to use :
+       1. inline css-cascading ------------ Higher  priority
+       2. internal css-cascading
+       3. external css-cascading  -->
+    
+     <div style="background-color: green; 
+                text-align: center; 
+                color: black;
+                font-size: larger;
+                font-weight: bolder;
+                "> 
+                Hey i'm going to be Inline css</div>
+                <p>Im the para</p>
+
+                <ul>
+                    <li>apple</li>
+                    <li>orange</li>
+                    <li>banana</li>
+                    <li>mango</li>
+                </ul>
+                <hr>
+                <!-- /* class using  .selector */ -->
+                <!-- /* id using # selector */
+                     /* multiple id cant generate */
+                     /* id and class can gave but ID takes the higher priority */ -->
+
+                <h1>Class and Id</h1>
+                <main id="main-component">
+                <div class="ele-div brd">Element 1</div>
+                <div id="uni-ele">Element 2</div>
+                <div>Element 3</div>
+                <div class="ele-div brd">Element 4</div>
+                <div>Element 5</div>
+                
+                <div class="ele-div"></div>
+                <div id="uni-ele">New Element 2 </div>
+                <div>New Element 3</div>
+                <div class="ele-div">New Element 4</div>
+                <div>New Element 5</div>
+                </main>
+                <br>
+                <hr>
+
+                <div id="container">
+                    <a href="#">
+                        <div>link 1</div>
+                    </a>
+
+                    <a href="#">
+                        <div class="anc-link">link 2</div>
+                    </a>
+
+                    <!-- /* block */ -->
+                    <h1>Block</h1>
+                    <span class="block">Home</span>
+                    <span class="block">About</span>
+                    <span class="block">Contact</span>
+                    <span class="block">Skills</span>
+
+                    <!-- /* Inline */ -->
+                    <h1>Inline</h1>
+                    <div class="Inline">Home</div>
+                    <div class="Inline">About</div>
+                    <div class="Inline">Contact</div>
+                    <div class="Inline">Skills</div>
+                    <br>
+
+                    <h1>Inline Block</h1>
+                    <!-- Inline-block -->
+                    <div class="Inline-block">Home</div>
+                    <div class="Inline-block">About</div>
+                    <div class="Inline-block">Contact</div>
+                    <div class="Inline-block">Skills</div>
+
+                </div>
+
+                <div class="unique-kasheef">Kasheef</div>
+                <div class="unique-kalil">Kalil</div>
+                <div id="unique-khalidh">Khalidh</div>
+                <div style="background-color: darkgray;">Mafaaz</div>
+
+</body>
+</html>

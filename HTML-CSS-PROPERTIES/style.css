@@ -1,0 +1,139 @@
+p{
+    background-color: black;
+    color: whitesmoke;
+    /* text-align: center; */
+}
+
+/* differnt types of properties */
+/* 1.list property */
+ul{
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+/* 2.font property */
+
+p{
+    font-size: 20px;
+    /* font-style: italic; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+/* 3.border property */
+
+p{
+    border: 10px solid rgb(149, 148, 148);
+}
+
+/* 4.text property */
+
+p{
+    text-align: center;
+}
+
+/* class using  .selector */
+
+.ele-div{
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: red;
+}
+
+.brd{
+    border: 2px solid blue;
+    font-style: italic;
+}
+
+/* id using # selector */
+/* multiple id cant generate */
+/* id and class can gave but ID takes the higher priority */
+#uni-ele{
+    background-color: dimgrey;
+}
+
+#main-component{
+    border: 2px solid black;
+}
+
+#container a div{
+    background-color: red;
+    margin: 5px;
+    padding: 2px;
+}
+.anc-link{
+    /* priorities number one first using !important */
+    background-color: green !important; 
+}
+
+/* block */
+
+.block{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    height: 20;
+    background-color: darkgray;
+}
+
+/* Inline */
+
+.Inline{
+    display: inline;
+    text-align: center;
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 5px;
+    /* will not take width and heigth in inline */
+    width: 50px;
+    height: 20;
+
+}
+
+.Inline-block{
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    height: 20px;
+}
+
+.unique-kasheef{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: burlywood;
+}
+.unique-kalil{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: blueviolet;
+}
+#unique-khalidh{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color:black;
+    color: beige;
+}
+
+
+
+
+
+
+
+
+
+

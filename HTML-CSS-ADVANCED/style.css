@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: darkgray;
+    /* text-align: center; */
+    /* position: relative;  */
+}
+
+#box-main{
+    border: 5px solid black;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: brown;
+    padding: 10px 0px 0px 0px;
+    
+}
+
+#box-model{
+    border: 5px solid black;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-color: brown;
+    
+}
+
+#positions{
+    border: 1px solid black;
+    margin: 15px;
+    height: 500px;
+    background-color: white;
+}
+
+.box{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    color: black;
+    text-align: center;
+    font-size: larger;
+}
+
+.absolute{
+    background-color: blue;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
+
+
+.relative{
+    background-color: blueviolet;
+    /* position: relative;
+    left: 50px;
+    bottom: 20px;
+    right: 15px;
+    top: 10px;  */
+}
+
+.fixed{
+    background-color: cadetblue;
+    /* position: fixed;
+     top: 0;
+    left: 0; */
+
+}  
+
+.sticky{
+    background-color: inherit;
+    position: sticky;
+    top: 0;   
+}
+
+nav{
+    border: 1px solid black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    background-color: whitesmoke;
+}
+
+ul{
+    list-style-type: none;
+    font-size: larger;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+li{
+    display: inline-block;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+}
+main{
+    margin-top: 50px;
+    text-align: center;
+}
