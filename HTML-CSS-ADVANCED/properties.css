@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+*{
+    text-align: center;
+}
+
+.overflow-main{
+    width: 50%;
+    height: 300px;
+    border: 1px solid black;
+    background-color: darkgrey;
+    font-family: 'Oswald', sans-serif;
+    overflow: auto; /*   it will detect and give suitable overflow scroll type
+    overflow: scroll; An extra scrollabe size based on your size limits
+    overflow: visible; all conetnt will be visible even after the size change
+    overflow: hidden; the content will be hidden from the display screen
+    overflow-y: hidden; based on x direction we can define the overflow property.
+    overflow-x: hidden; based on y direction we can define the overflow property.
+    */
+}
+
+.measurements{
+    margin: auto;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* 96px = 1 inch */
+#sample{
+    width: 2em;
+    height: 2em;
+    border: 1px solid red;
+    background-color: forestgreen;
+}
+/* 72pt = 1 inch */
+#sample-2{
+    width: 72pt;
+    height: 50%;
+    border: 1px solid red;
+    background-color: rgb(44, 46, 44);
+}
+
+#percent{
+    background-color: crimson;
+    height: 50%;
+}
+
+/* Measurements
+Absolute
+px pixels (1/96 (1 inch))
+pt points (1/72 (1 inch))
+pc picas (1/12ppt (1 inch))
+
+Relative
+em = elements based on font size 
+rem = root element of font size 
+vw = screen sizing of font size */
+
+/* media query
+
+big screen size with  break point */
+@media only screen and (max-width : 1200px){
+    body{
+        background-color: cyan;
+    }
+    .overflow-main{
+        background-color: darkslategray;
+        font-family: cursive;
+        width: 25%;
+    }
+}
+
+/* mid screen (tablet or mini laptop) */
+@media only screen and (max-width : 700px){
+    body{
+        background-color: red;        
+    }
+    .overflow-main{
+        background-color: bisque;
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 50%;
+    }
+}
+    
+/* small screen */
+@media only screen and (max-width : 375px){
+    body{
+        background-color: rgb(37, 37, 37);        
+    }
+    .overflow-main{
+        background-color: rgb(228, 131, 13);
+        color: yellow ;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

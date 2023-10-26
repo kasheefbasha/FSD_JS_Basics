@@ -1,0 +1,156 @@
+
+*{
+    text-align: center;
+    background-color: darkgrey;
+    font-size: 20 px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+}
+ul{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    height: 5vh;
+    /* background-color: dimgrey; */
+}
+
+li{
+    display: inline-block;
+    padding: 5px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo{
+    display: inline-block;
+    padding: 5px;
+    font-size: larger;
+    color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image{
+    display: grid;
+    place-items: center;
+    /* border: 1px solid black; */
+    grid-area: image
+}
+.info{
+    display: grid;
+    place-items: center;
+    /* border: 1px solid black; */
+    grid-area: info
+}
+.title{
+    display: grid;
+    place-items: center;
+    /* border: 1px solid black; */
+    grid-area: title
+}
+
+#home{
+    display: grid;
+    grid-template:
+    "title" 22%
+    "image" 32%
+    "info" 42%;
+    place-items: center;
+}
+#about{
+    display: grid;
+    grid-template:
+    "image info" 96%;
+    place-items: center;
+    
+}
+#skills{
+    display: grid;
+    grid-template:
+    "image info" 96%;
+    place-items: center;
+    
+}
+#contact{
+    display: grid;
+    grid-template:
+    "image" 70%
+    "info" 26%;
+    place-items: center;
+    
+   
+} 
+
+.com-section{
+    display: grid;
+    /* place-items: center; */
+    background-color: darkgrey;
+    height: 95vh;
+    /* grid-template-columns: 200px 500px; */
+    /* grid-template-rows: 200px 500px; */
+    /* grid-template-columns: repeat(2, 1fr); */
+
+}
+
+.material-symbols-outlined{
+    visibility: hidden;
+}
+
+/* big screen size with  break point */
+
+@media only screen and (min-width : 275px) and (max-width : 475px){
+    *{
+        font-size: 25px;
+    }
+    .name{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+    .com-section{
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 100%;
+    }
+    .info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .material-symbols-outlined{
+        visibility: visible;
+    }
+    #about, #skills{
+        grid-template:
+        "image" 48%
+        "info" 48%;
+        
+    }
+}
+
+@media only screen and (min-width : 475px) and (max-width : 1200px){
+    
+    
+    #about, #skills{
+        grid-template:
+        "image" 48%
+        "info" 48%;
+        
+    }
+}
+
+@media only screen and (min-width : 1200px) and (max-width : 1600px){
+    
+}
+
+
+
+
+
+
+
+
